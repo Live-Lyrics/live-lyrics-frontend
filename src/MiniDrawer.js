@@ -6,7 +6,6 @@ import Drawer from 'material-ui/Drawer';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import List from 'material-ui/List';
-import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
 import Divider from 'material-ui/Divider';
 import IconButton from 'material-ui/IconButton';
@@ -15,11 +14,11 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { mailFolderListItems } from './tileData';
 
-import * as FontAwesome from 'react-icons/lib/fa'
 import ReactPlayer from 'react-player'
 
 import RadioButtonsGroup from './RadioButtonsGroup';
 import MediaControlCard from './MediaControlCard';
+import LoginButtons from './LoginButtons';
 
 
 const drawerWidth = 240;
@@ -56,6 +55,7 @@ const styles = theme => ({
   },
   drawerPaper: {
     position: 'relative',
+    whiteSpace: 'nowrap',
     width: drawerWidth,
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
@@ -140,10 +140,7 @@ class MiniDrawer extends React.Component {
         </Drawer>
         <main className={classes.content}>
           <div className={classes.toolbar} />
-          <Button className={classes.button} variant="raised" color="primary">
-            Login
-            <FontAwesome.FaSpotify className={classes.rightIcon} color="green" />
-          </Button>
+          <LoginButtons />
           <RadioButtonsGroup />
           <MediaControlCard />
           <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' controls/>

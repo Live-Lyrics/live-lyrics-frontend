@@ -23,7 +23,7 @@ export const mailFolderListItems = (
       <ListItemIcon>
         <SendIcon />
       </ListItemIcon>
-      <ListItemText primary="Import" />
+      <ListItemText primary="Import and export" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
