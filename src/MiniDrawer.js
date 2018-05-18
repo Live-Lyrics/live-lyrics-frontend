@@ -14,13 +14,6 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { mailFolderListItems } from './tileData';
 
-import ReactPlayer from 'react-player'
-
-import RadioButtonsGroup from './RadioButtonsGroup';
-import MediaControlCard from './MediaControlCard';
-import LoginButtons from './LoginButtons';
-
-
 const drawerWidth = 240;
 
 const styles = theme => ({
@@ -140,10 +133,7 @@ class MiniDrawer extends React.Component {
         </Drawer>
         <main className={classes.content}>
           <div className={classes.toolbar} />
-          <LoginButtons />
-          <RadioButtonsGroup />
-          <MediaControlCard />
-          <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' controls/>
+          {this.props.children}
         </main>
       </div>
     );
