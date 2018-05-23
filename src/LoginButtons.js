@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from 'material-ui/Button';
-import { withStyles, createMuiTheme, MuiThemeProvider } from 'material-ui/styles';
+import Button from '@material-ui/core/Button';
+import { withStyles, createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpotify } from '@fortawesome/free-brands-svg-icons'

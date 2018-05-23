@@ -19,21 +19,20 @@ export const LyricsProvider = {
 
 export function toggleDiscogs(bool) {
   return { type: TOGGLE_DISCOGS, bool}
-};
-
+}
 
 export function toggYouTube(bool) {
   return { type: TOGGLE_YOUTUBE, bool}
-};
+}
 
 export function setYouTubeId(id) {
   return { type: SET_YOUTUBE_ID, id }
-};
+}
 
 export function setLyricsProvider(lyricsProvider) {
   return { type: SET_LYRICS_PROVIDER, lyricsProvider }
-};
+}
 
 export function setBroadcastProvider(broadcastProvider) {
   return { type: SET_BROADCAST_PROVIDER, broadcastProvider }
-};
+}
