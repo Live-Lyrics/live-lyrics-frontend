@@ -19,12 +19,14 @@ export const mailFolderListItems = (
       </ListItem>
     </Link>
 
-    <ListItem button>
-      <ListItemIcon>
-        <StarIcon />
-      </ListItemIcon>
-      <ListItemText primary="Recognize" />
-    </ListItem>
+    <Link to="/recognition" style={{ textDecoration: 'none' }}>
+      <ListItem button>
+        <ListItemIcon>
+          <StarIcon />
+        </ListItemIcon>
+        <ListItemText primary="Recognize" />
+      </ListItem>
+    </Link>
 
     <ListItem button>
       <ListItemIcon>

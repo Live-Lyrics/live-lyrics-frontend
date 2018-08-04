@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import LL from './LL';
 import About from './About';
+import MusicRecognition from './MusicRecognition';
 import './index.css';
 
 import configureStore from './configureStore'
@@ -16,6 +17,7 @@ ReactDOM.render(
       <Router>
         <div>
           <Route exact path="/" component={LL} />
+          <Route path="/recognition" component={MusicRecognition} />
           <Route path="/organize" component={About} />
         </div>
       </Router>
