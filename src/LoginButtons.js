@@ -7,9 +7,18 @@ import { faSpotify } from '@fortawesome/free-brands-svg-icons'
 import { faVk } from '@fortawesome/free-brands-svg-icons'
 import { faLastfm } from '@fortawesome/free-brands-svg-icons'
 
-const spotifyTheme = createMuiTheme({ palette: { primary: {main: '#1DB954'} } })
-const vkTheme = createMuiTheme({ palette: { primary: {main: '#45668E'} } })
-const lastfmTheme = createMuiTheme({ palette: { primary: {main: '#d51007'} } })
+const spotifyTheme = createMuiTheme({
+  typography: {useNextVariants: true},
+  palette: { primary: {main: '#1DB954'} }
+})
+const vkTheme = createMuiTheme({
+  typography: {useNextVariants: true},
+  palette: { primary: {main: '#45668E'} }
+})
+const lastfmTheme = createMuiTheme({
+  typography: {useNextVariants: true},
+  palette: { primary: {main: '#d51007'} }
+})
 
 
 const styles = theme => ({
@@ -34,7 +43,7 @@ class LoginButtons extends React.Component {
       <div className={classes.root}>
         Login: 
         <MuiThemeProvider theme={spotifyTheme}>
-          <Button className={classes.button} variant="raised" color='primary'
+          <Button className={classes.button} variant="contained" color='primary'
            onClick={() => {
             window.location = window.location.href.includes('localhost')
               ? 'http://localhost:8888/login'
@@ -46,14 +55,14 @@ class LoginButtons extends React.Component {
         </MuiThemeProvider>
 
         <MuiThemeProvider theme={vkTheme}>
-          <Button className={classes.button} variant="raised" color="primary">
+          <Button className={classes.button} variant="contained" color="primary">
             VK
             <FontAwesomeIcon icon={faVk}  className={classes.rightIcon} />
           </Button>
         </MuiThemeProvider>
   
         <MuiThemeProvider theme={lastfmTheme}>
-          <Button className={classes.button} variant="raised" color="primary">
+          <Button className={classes.button} variant="contained" color="primary">
             Lastfm
             <FontAwesomeIcon icon={faLastfm}  className={classes.rightIcon} />
           </Button>
