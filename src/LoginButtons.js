@@ -34,7 +34,12 @@ class LoginButtons extends React.Component {
       <div className={classes.root}>
         Login: 
         <MuiThemeProvider theme={spotifyTheme}>
-          <Button className={classes.button} variant="raised" color='primary'>
+          <Button className={classes.button} variant="raised" color='primary'
+           onClick={() => {
+            window.location = window.location.href.includes('localhost')
+              ? 'http://localhost:8888/login'
+              : 'https://live-lyrics.herokuapp.com/login' }
+          }>
             Spotify
             <FontAwesomeIcon icon={faSpotify}  className={classes.rightIcon} />
           </Button>
