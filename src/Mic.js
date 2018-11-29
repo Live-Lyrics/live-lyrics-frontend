@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Button from '@material-ui/core/Button';
+import Fab from '@material-ui/core/Fab'
 import { withStyles } from '@material-ui/core/styles';
 import Mic from '@material-ui/icons/Mic';
 import MicOff from '@material-ui/icons/MicOff';
@@ -72,12 +72,12 @@ class Micr extends Component {
         </div>
         <br />
         <br />
-        <Button variant="fab" color="primary" disabled={isRecording}  onClick={this.startRecording} aria-label="add" className={classes.button}>
+        <Fab color="primary" disabled={isRecording}  onClick={this.startRecording} aria-label="add" className={classes.button}>
           <Mic />
-        </Button>
-        <Button variant="fab" color="primary" disabled={!isRecording}  onClick={this.stopRecording} aria-label="add" className={classes.button}>
+        </Fab>
+        <Fab color="primary" disabled={!isRecording}  onClick={this.stopRecording} aria-label="add" className={classes.button}>
           <MicOff />
-        </Button>
+        </Fab>
       </div>
     );
   }
